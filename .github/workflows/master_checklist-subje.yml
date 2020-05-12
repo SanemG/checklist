@@ -86,8 +86,7 @@ jobs:
         #publish-profile: ${{ secrets.AzureAppService_PublishProfile_dfee26a01c034f6080a3b36a4bfc19d8 }}
         #package: .
     - name: 'Deploy to Azure Web App'
-      #uses: azure/webapps-deploy@v2
-      uses: azure/webapps-container-deploy@v1
+      uses: azure/webapps-deploy@v2
       with:
         app-name: 'checklist-subje-docker'
         images: 'subjerepo.azurecr.io/checklistsubjedocker45ca:${{ github.run_id }}'
